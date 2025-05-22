@@ -7,8 +7,6 @@ from streamlit_folium import st_folium
 import requests
 
 # 🔑 네이버 API 인증 정보 입력 필요
-NAVER_CLIENT_ID = "ncp_iam_BPAMKR1YbBHoxKXtz1wY"
-NAVER_CLIENT_SECRET = "ncp_iam_BPKMKRG3wzlxx3aGhiP1QX8nPAk4hjOujd"
 
 # 📄 데이터 불러오기
 @st.cache_data
