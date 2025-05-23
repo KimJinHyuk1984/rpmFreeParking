@@ -1,6 +1,8 @@
 streamlit
-pandas
-folium
 streamlit-folium
-openpyxl
+folium
+pandas
 requests
+openpyxl
+polyline
+numpy
