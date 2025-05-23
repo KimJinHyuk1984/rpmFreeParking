@@ -26,7 +26,7 @@ def search_places_kakao(query, kakao_rest_api_key):
     headers = {
         "Authorization": f"KakaoAK {kakao_rest_api_key}"
     }
-    res = requests.get(url, headers=headers, verify=False)
+    res = requests.get(url, headers=headers)
     results = []
     if res.status_code == 200:
         data = res.json()
