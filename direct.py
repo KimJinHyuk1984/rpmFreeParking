@@ -27,7 +27,7 @@ def search_places_kakao(query, kakao_rest_api_key):
     headers = {
         "Authorization": f"KakaoAK {kakao_rest_api_key}"
     }
-    res = requests.get(url, headers=headers, verify=False)
+    res = requests.get(url, headers=headers)
     results = []
     if res.status_code == 200:
         data = res.json()
@@ -45,7 +45,7 @@ def search_places_kakao(query, kakao_rest_api_key):
 
 def get_transit_steps_by_google(start_lat, start_lng, end_lat, end_lng, api_key):
     url = f"https://maps.googleapis.com/maps/api/directions/json?origin={start_lat},{start_lng}&destination={end_lat},{end_lng}&mode=transit&key={api_key}"
-    res = requests.get(url, verify=False)
+    res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
         if data["status"] == "OK":
